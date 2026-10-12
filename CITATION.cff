@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite this repository and the exact revision used."
+title: "A Logarithmic Endpoint Refinement of Collatz Orbit Sparsity: Lean 4 Formalization"
+type: software
+authors:
+  - family-names: "Esm"
+version: 0.1.0
+date-released: "2026-10-12"
+repository-code: "https://github.com/Esythium/collatz-endpoint-lean"
+url: "https://github.com/Esythium/collatz-endpoint-lean"
+license: Apache-2.0
+keywords:
+  - Collatz problem
+  - Lean 4
+  - formal verification
+  - orbit sparsity
+  - entropy

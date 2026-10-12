@@ -1,0 +1,84 @@
+def CollatzEndpoint.alpha : ℝ :=
+Classical.choose entropy_root_exists
+def CollatzEndpoint.beta : ℝ :=
+alpha * Real.log 3 / Real.log 2
+def CollatzEndpoint.gamma : ℝ :=
+Real.log 3 / (2 * entropyGap)
+def CollatzEndpoint.step : ℕ → ℕ :=
+fun n => if n % 2 = 0 then n / 2 else (3 * n + 1) / 2
+def CollatzEndpoint.CollisionFree : Set ℕ → Prop :=
+fun A => ∀ (k : ℕ), Set.InjOn (fun n => orbit n k) A
+def CollatzEndpoint.Divergent : ℕ → Prop :=
+fun start => Filter.Tendsto (orbit start) Filter.atTop Filter.atTop
+def CollatzEndpoint.EventuallyPeriodic : ℕ → Prop :=
+fun start => ∃ i p, 0 < p ∧ ∀ (n : ℕ), i ≤ n → orbit start (n + p) = orbit start n
+def CollatzEndpoint.successiveOddOrbit : ℕ → ℕ → ℕ :=
+fun n k => oddOrbit (firstOdd n) k
+def CollatzEndpoint.collatzDrift : ℕ → ℕ → ℝ :=
+fun start n => driftSequence (fun j => oddValuation (successiveOddOrbit start j)) n
+CollatzEndpoint.alpha_unique {p : ℝ} (hp : p ∈ Set.Icc (1 / 2) 1) (he : Real.binEntropy p = p * Real.log 3) : p = alpha
+CollatzEndpoint.parityWord_bijective (k : ℕ) :
+  Set.BijOn (fun n => oddPositions n k) ↑(Finset.range (2 ^ k)) ↑(Finset.range k).powerset
+CollatzEndpoint.dyadic_translation (n k q : ℕ) :
+  oddCount (n + q * 2 ^ k) k = oddCount n k ∧ orbit (n + q * 2 ^ k) k = orbit n k + q * 3 ^ oddCount n k
+CollatzEndpoint.block_card_le_layerSum (A : Finset ℕ) (q k : ℕ) (hfree : CollisionFree ↑A)
+  (hblock : ∀ n ∈ A, q * 2 ^ k ≤ n ∧ n < (q + 1) * 2 ^ k) : A.card ≤ layerSum k
+CollatzEndpoint.layerSum_le {k : ℕ} (hk : 1 ≤ k) : ↑(layerSum k) ≤ 100 * 2 ^ (beta * ↑k) * ↑k ^ (-gamma)
+CollatzEndpoint.uniform_window_bound {A : Set ℕ} (hfree : CollisionFree A) (a : ℕ) {X : ℕ} (hX : 2 ≤ X) :
+  ↑(windowSet A a X).card ≤ 400 * ↑X ^ beta / Real.logb 2 ↑X ^ gamma
+CollatzEndpoint.divergent_prefixMax_lower {start : ℕ} (hstart : 0 < start) (hdiv : Divergent start) {N : ℕ}
+  (hN : 2 ≤ N) : 400 ^ (-1 / beta) * ↑N ^ (1 / beta) * Real.logb 2 ↑N ^ (gamma / beta) ≤ ↑(prefixMax (orbit start) N)
+CollatzEndpoint.divergent_odd_prefixMax_lower {start : ℕ} (hstart : 0 < start) (hdiv : Divergent start) {N : ℕ}
+  (hN : 2 ≤ N) :
+  400 ^ (-1 / beta) * ↑N ^ (1 / beta) * Real.logb 2 ↑N ^ (gamma / beta) ≤ ↑(prefixMax (successiveOddOrbit start) N)
+CollatzEndpoint.divergent_not_isBigO {start : ℕ} {c : ℝ} (hstart : 0 < start) (hdiv : Divergent start)
+  (hc : c < gamma / beta) : ¬(fun n => ↑(orbit start n)) =O[Filter.atTop] powerLogScale (1 / beta) c
+CollatzEndpoint.divergent_odd_not_isBigO {start : ℕ} {c : ℝ} (hstart : 0 < start) (hdiv : Divergent start)
+  (hc : c < gamma / beta) : ¬(fun n => ↑(successiveOddOrbit start n)) =O[Filter.atTop] powerLogScale (1 / beta) c
+CollatzEndpoint.eventuallyPeriodic_of_critical_power {start : ℕ} (hstart : 0 < start)
+  (hO : (fun n => ↑(orbit start n)) =O[Filter.atTop] fun n => ↑n ^ (1 / beta)) : EventuallyPeriodic start
+CollatzEndpoint.eventuallyPeriodic_of_odd_critical_power {start : ℕ} (hstart : 0 < start)
+  (hO : (fun n => ↑(successiveOddOrbit start n)) =O[Filter.atTop] fun n => ↑n ^ (1 / beta)) : EventuallyPeriodic start
+CollatzEndpoint.divergent_reciprocal_summable {start : ℕ} (hstart : 0 < start) (hdiv : Divergent start) :
+  Summable fun n => 1 / ↑(orbit start n)
+CollatzEndpoint.divergent_odd_reciprocal_summable {start : ℕ} (hstart : 0 < start) (hdiv : Divergent start) :
+  Summable fun n => 1 / ↑(successiveOddOrbit start n)
+CollatzEndpoint.collatz_product_identity {start : ℕ} (hstart : 0 < start) (n : ℕ) :
+  ↑(successiveOddOrbit start n) =
+    ↑(successiveOddOrbit start 0) * 2 ^ collatzDrift start n * correctionProduct (successiveOddOrbit start) n
+CollatzEndpoint.divergent_correctionProduct_converges {start : ℕ} (hstart : 0 < start) (hdiv : Divergent start) :
+  ∃ Q,
+    1 ≤ Q ∧
+      Q ≤ Real.exp (∑' (j : ℕ), 1 / (3 * ↑(successiveOddOrbit start j))) ∧
+        Filter.Tendsto (correctionProduct (successiveOddOrbit start)) Filter.atTop (nhds Q)
+CollatzEndpoint.divergent_not_drift_upper {start : ℕ} {c B : ℝ} (hstart : 0 < start) (hdiv : Divergent start)
+  (hc : c < gamma / beta) :
+  ¬∀ᶠ (n : ℕ) in Filter.atTop, collatzDrift start n ≤ 1 / beta * Real.logb 2 ↑n + c * Real.logb 2 (Real.logb 2 ↑n) + B
+CollatzEndpoint.divergent_drift_frequently_gt {start : ℕ} {c : ℝ} (hstart : 0 < start) (hdiv : Divergent start)
+  (hc : c < gamma / beta) :
+  ∃ᶠ (n : ℕ) in Filter.atTop, c < (collatzDrift start n - 1 / beta * Real.logb 2 ↑n) / Real.logb 2 (Real.logb 2 ↑n)
+CollatzEndpoint.divergent_drift_limsup {start : ℕ} (hstart : 0 < start) (hdiv : Divergent start) :
+  ↑gamma / ↑beta ≤
+    Filter.limsup (fun n => ↑((collatzDrift start n - 1 / beta * Real.logb 2 ↑n) / Real.logb 2 (Real.logb 2 ↑n)))
+      Filter.atTop
+'CollatzEndpoint.alpha_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.parityWord_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.dyadic_translation' depends on axioms: [propext, Quot.sound]
+'CollatzEndpoint.block_card_le_layerSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.layerSum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.uniform_window_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_iff_injective_orbit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.successiveOddOrbit_eq_orbit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_prefixMax_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_odd_prefixMax_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_not_isBigO' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_odd_not_isBigO' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.eventuallyPeriodic_of_critical_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.eventuallyPeriodic_of_odd_critical_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_reciprocal_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_odd_reciprocal_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.collatz_product_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_correctionProduct_converges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_not_drift_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_drift_frequently_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzEndpoint.divergent_drift_limsup' depends on axioms: [propext, Classical.choice, Quot.sound]

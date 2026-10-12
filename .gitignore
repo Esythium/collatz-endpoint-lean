@@ -1,36 +1,36 @@
-## macOS
+# Lean build outputs and downloaded dependencies
+.lake/
+.elan/
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
+*.trace
+
+# Local environments, secrets, and machine-specific launchers
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+.direnv/
+localrun/
+local-run/
+run-lean.ps1
+*.local
+*.local.*
+
+# Temporary files and editor/OS state
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*~
 .DS_Store
-## Lake
-.lake/*
-.cache/*
-## Blueprint
-/blueprint/print/print.log
-/blueprint/web/
-/blueprint/src/web.paux
-/blueprint/src/web.bbl
-/blueprint/print/
-## TeX
-*.aux
-*.lof
-*.log
-*.lot
-*.fls
-*.out
-*.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
-.*.lb
-*.bbl
-*.bcf
-*.blg
-*-blx.aux
-*-blx.bib
-*.run.xml
-*.fdb_latexmk
-*.synctex
-*.synctex(busy)
-*.synctex.gz
-*.synctex.gz(busy)
-*.pdfsync
+Thumbs.db
+desktop.ini
+
+# Verification logs are intentional public evidence.
+!verification/*.log

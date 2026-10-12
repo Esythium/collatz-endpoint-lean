@@ -1,0 +1,40 @@
+FORMALIZATION STATUS: COMPLETE
+Date: 2026-10-12
+Paper: A Logarithmic Endpoint Refinement of Collatz Orbit Sparsity
+Paper author: Esm
+
+All three requested mathematical stages have been formalized:
+1. Exact parity, translated endpoint and finite-layer counting.
+2. Exact entropy exponents; all-depth layer sum with constant 100; arbitrary
+   windows with constant 400 for every integer length X >= 2.
+3. Concrete shortcut and successive-odd trajectory prefix bounds; exclusion
+   of pointwise critical Big-O growth; eventual periodicity under the growth
+   hypothesis; reciprocal summability; exact drift product identity, finite
+   correction-product limit, drift envelope exclusion and extended-real limsup.
+
+The final theorems instantiate all intermediate counting, recurrence and
+summability hypotheses. No unproved version of the target estimate is assumed.
+The proof uses equivalent intermediate block conventions and standard mathlib
+Stirling estimates; it is not a literal transcription of every prose step.
+
+Validation:
+- Pinned Lean v4.35.0-rc4 and mathlib commit
+  021c46bdd042f67b538b9f9871d556a93713a9a9.
+- All nine dependency revisions match their manifest and have no tracked edits.
+- Build passed; fresh build of all project modules passed, reusing only
+  external dependency caches. Compiler warnings are module-system migration
+  suggestions, not admitted-proof warnings.
+- Audit.lean printed 21 selected theorem dependency closures. Only propext,
+  Classical.choice and Quot.sound occur (some closures use a subset).
+- Source scan found no sorry, admit, custom axiom, unsafe, implemented_by or
+  native_decide in the mathematical project modules.
+- leanchecker --fresh --verbose CollatzEndpoint passed: imported safe
+  declarations were replayed into a fresh environment using the same official
+  Lean kernel. This is not a separately implemented third-party checker.
+- Separate semantic review matched the final definitions, quantifiers,
+  constants and hypotheses to the intended mathematical claims.
+
+The decimal approximations and historical priority claims are not formalized.
+This does not prove the full Collatz conjecture, exclude nontrivial cycles,
+establish global originality, or constitute external peer review.
+See README.md, THEOREM_MAP.md, audit_semantics.txt and the retained logs.

@@ -1,0 +1,12 @@
+Collatz endpoint sparsity: Lean 4 formalization
+Author: Esm
+Copyright 2026 Esm
+
+Repository scaffolding is adapted from leanprover-community/LeanProject,
+commit d4f099e563310c15189cf5b73c39efe6e8fdfd4b.
+https://github.com/leanprover-community/LeanProject
+
+The template's Apache License 2.0 and Lean extension recommendation are retained;
+the editor configuration has been adapted for this Lean-only project.
+The mathematical formalization uses Lean and mathlib at the revisions recorded
+in lean-toolchain and lake-manifest.json. Dependencies retain their own licenses.

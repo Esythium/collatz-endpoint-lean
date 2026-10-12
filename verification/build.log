@@ -1,0 +1,63 @@
+⚠ [2289/2503] Replayed CollatzEndpoint.Entropy
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Analysis.SpecialFunctions.BinaryEntropy` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Topology.Order.IntermediateValue` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Tactic.NormNum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Tactic.Positivity` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Entropy.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2290/2503] Replayed CollatzEndpoint.Parity
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Logic.Function.Iterate` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Data.Nat.ModEq` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Tactic.Positivity` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Parity.lean: imports `Mathlib.Data.Finset.Powerset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2291/2503] Replayed CollatzEndpoint.Counting
+warning: CollatzEndpoint\Counting.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Counting.lean: imports `Mathlib.Data.Nat.Choose.Sum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Counting.lean: imports `Mathlib.Data.Finset.Powerset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Counting.lean: imports `Mathlib.Order.Interval.Finset.Nat` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2839/2853] Replayed CollatzEndpoint.LayerEstimate
+warning: CollatzEndpoint\LayerEstimate.lean: imports `Mathlib.Analysis.SpecialFunctions.Stirling` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\LayerEstimate.lean: imports `Mathlib.Analysis.Complex.ExponentialBounds` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\LayerEstimate.lean: imports `Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\LayerEstimate.lean: imports `Mathlib.Data.Nat.Choose.Cast` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\LayerEstimate.lean: imports `Mathlib.Data.Nat.Choose.Sum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2840/2853] Replayed CollatzEndpoint.WindowCover
+warning: CollatzEndpoint\WindowCover.lean: imports `Mathlib.Order.Interval.Finset.Nat` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowCover.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowCover.lean: imports `Mathlib.Data.Nat.Log` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowCover.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowCover.lean: imports `Mathlib.Tactic.NormNum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2843/2853] Replayed CollatzEndpoint.WindowEstimate
+warning: CollatzEndpoint\WindowEstimate.lean: imports `Mathlib.Analysis.SpecialFunctions.Log.Base` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowEstimate.lean: imports `Mathlib.Tactic.GCongr` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowEstimate.lean: imports `Mathlib.Tactic.Positivity` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\WindowEstimate.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2845/2853] Replayed CollatzEndpoint.OrbitGrowth
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Data.Finset.Lattice.Fold` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Order.Interval.Finset.Nat` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Analysis.SpecialFunctions.Log.Base` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Logic.Function.Iterate` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Tactic.Positivity` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Tactic.NormNum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\OrbitGrowth.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2846/2853] Replayed CollatzEndpoint.Reciprocal
+warning: CollatzEndpoint\Reciprocal.lean: imports `Mathlib.Analysis.SpecificLimits.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Reciprocal.lean: imports `Mathlib.Data.Nat.Log` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Reciprocal.lean: imports `Mathlib.Topology.Algebra.InfiniteSum.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2847/2853] Replayed CollatzEndpoint.Dynamics
+warning: CollatzEndpoint\Dynamics.lean: imports `Mathlib.Order.Filter.Cofinite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [2850/2853] Replayed CollatzEndpoint.Drift
+warning: CollatzEndpoint\Drift.lean: imports `Mathlib.Analysis.SpecialFunctions.Exp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Drift.lean: imports `Mathlib.Topology.Algebra.InfiniteSum.Order` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Drift.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Drift.lean: imports `Mathlib.Data.EReal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CollatzEndpoint\Drift.lean: imports `Mathlib.Order.LiminfLimsup` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (2853 jobs).

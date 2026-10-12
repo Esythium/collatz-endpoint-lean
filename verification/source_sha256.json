@@ -1,0 +1,70 @@
+[
+  {
+    "path": "CollatzEndpoint/Counting.lean",
+    "sha256": "ef85fb850395c63ebc65d9642642787a92851074fa8a02dc191013ff1bfc45f8"
+  },
+  {
+    "path": "CollatzEndpoint/Drift.lean",
+    "sha256": "26dc79f380cd4d323dd09ebe5fdec8908e23c8ff0919a13c0d8bd3961b8c4de4"
+  },
+  {
+    "path": "CollatzEndpoint/Dynamics.lean",
+    "sha256": "a507f9fd7b2804ffb8e28d9479bd9b06a8c1cfd5a10e6f821672939574277754"
+  },
+  {
+    "path": "CollatzEndpoint/Entropy.lean",
+    "sha256": "d316907e5e0e61b94d25c3ee094529933de8cb1130d92b9f97dcfaf027c615b1"
+  },
+  {
+    "path": "CollatzEndpoint/LayerEstimate.lean",
+    "sha256": "437346c6ec0413628cb11af715595bf5929d741ea94fd59d2683fd45446db952"
+  },
+  {
+    "path": "CollatzEndpoint/MainResults.lean",
+    "sha256": "d5ebfb7372837b6efdaf5114daf2e5a92a4439b1922a16c0ec7c47b02c2b8ae4"
+  },
+  {
+    "path": "CollatzEndpoint/OrbitGrowth.lean",
+    "sha256": "b9ffa7db2e97dcce92f915a06bbb04074fdbc1ba5c001b97f1ea53661321187b"
+  },
+  {
+    "path": "CollatzEndpoint/Parity.lean",
+    "sha256": "d4091c90213c41efabfdb23c8e0472ce2d2eca6fd7e040336cd2437c2cb4736b"
+  },
+  {
+    "path": "CollatzEndpoint/Reciprocal.lean",
+    "sha256": "eed0cd20571dfb2256c561446c73746470533ffe4c5687e4bdc05067c977b1ea"
+  },
+  {
+    "path": "CollatzEndpoint/WindowCover.lean",
+    "sha256": "106a543d977f91eb3fb57e71856e50da613fdbb6f8f4a21501fd1342f13c1a65"
+  },
+  {
+    "path": "CollatzEndpoint/WindowEstimate.lean",
+    "sha256": "71fa37fa6ecbff8c2c9dc635deadfd8ffcdb7f97f3428708669d87567833df53"
+  },
+  {
+    "path": "CollatzEndpoint/Windows.lean",
+    "sha256": "536b8f6f00861abdc98e2390546a1c5c21356a03a27d3558a67d13732b35990f"
+  },
+  {
+    "path": "CollatzEndpoint.lean",
+    "sha256": "5a5f3aac3c509e57cfcaa462fcbe736cb4fa5d454c38249de7a4a39ee195bc21"
+  },
+  {
+    "path": "Audit.lean",
+    "sha256": "f6fdc1337312891e89fc3def340ad89573311bfae2ad38afea05f0f6c4099272"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "2a24e4999044cb228ca68e783b640fa8d66f8994ec16aaa73d72cb50e5c25c03"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "2b21909f08204a96c6edeeb1e8836d61089ab62a178f5bbd5af436cfc266a8dc"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "8f89aa44fccdb1a0b6cc768c7c9f54b94cd40e47a08d582f82d1235f13075cf7"
+  }
+]

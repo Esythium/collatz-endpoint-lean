@@ -1,0 +1,22 @@
+{
+  "status": "prepared, no remote creation or upload performed by preparation agent",
+  "repository": "https://github.com/Esythium/collatz-endpoint-lean",
+  "author": "Esm",
+  "template_repository": "https://github.com/leanprover-community/LeanProject",
+  "template_commit": "d4f099e563310c15189cf5b73c39efe6e8fdfd4b",
+  "mathematical_modules_copied": 12,
+  "source_and_lock_files_verified_byte_identical": 17,
+  "template_files_verified_byte_identical": [
+    "LICENSE",
+    ".vscode/extensions.json"
+  ],
+  "retained_logs": "verification/*.log intentionally not ignored",
+  "publication_sanitization": "local absolute paths removed; local Lake launcher spelling normalized in retained logs",
+  "scan_findings": [],
+  "notes": [
+    "No paper PDF, private launcher, Git metadata, dependency checkout, toolchain, or cache included.",
+    ".github/workflows/lean.yml is managed separately by the CI agent.",
+    "This record checks publication preparation; it is not a new source build or a remote CI result."
+  ],
+  "adapted_template_file": ".vscode/settings.json: retained generic editor settings and read-only dependency/toolchain directories; omitted unused blueprint/LaTeX configuration"
+}

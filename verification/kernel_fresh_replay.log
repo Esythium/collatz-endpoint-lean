@@ -1,0 +1,6 @@
+Started: 2026-10-12T08:16:10.0533046+08:00
+Command: lake env leanchecker --fresh --verbose CollatzEndpoint
+replaying CollatzEndpoint with --fresh
+Finished: 2026-10-12T08:20:57.7070210+08:00
+Elapsed seconds: 287.6537164
+Exit code: 0

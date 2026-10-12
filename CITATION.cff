@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: "Esm"
 version: 0.1.0
+doi: "10.5281/zenodo.23307433"
 date-released: "2026-10-12"
 repository-code: "https://github.com/Esythium/collatz-endpoint-lean"
 url: "https://github.com/Esythium/collatz-endpoint-lean"

@@ -1,6 +1,7 @@
 # Collatz endpoint sparsity: Lean 4 formalization
 
 [![Lean verification](https://github.com/Esythium/collatz-endpoint-lean/actions/workflows/lean.yml/badge.svg)](https://github.com/Esythium/collatz-endpoint-lean/actions/workflows/lean.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23307433.svg)](https://doi.org/10.5281/zenodo.23307433)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-lightblue.svg)](LICENSE)
 
 **Author: Esm.** Licensed under [Apache 2.0](LICENSE).
@@ -121,4 +122,18 @@ when available, are a separate check of the pushed revision.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the required build and axiom checks when
 proposing a change.
 
-Citation metadata is available in [CITATION.cff](CITATION.cff).
+## Citation and archived release
+
+The first release, [v0.1.0](https://github.com/Esythium/collatz-endpoint-lean/releases/tag/v0.1.0),
+is preserved on [Zenodo](https://zenodo.org/records/23307433). To cite this exact
+version, use:
+
+> Esm. (2026). *A Logarithmic Endpoint Refinement of Collatz Orbit Sparsity: Lean 4 Formalization* (v0.1.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23307433
+
+The archived source corresponds to commit
+`d324b48484ce88a3d28863177855c09acd661b55`. The version DOI above identifies that
+fixed snapshot. The [all-versions DOI](https://doi.org/10.5281/zenodo.23307432)
+identifies the software across releases; use the version DOI for reproducible
+citations. The development branch may contain later changes.
+
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff).
